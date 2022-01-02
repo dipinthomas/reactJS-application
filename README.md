@@ -62,8 +62,8 @@ The following system requirements must be met in order for this program to run.
 
 Once we have tested it on our local, its time to run it on remote server, [Digitalocean](https://www.digitalocean.com/) is developer friendly cloud provider and best place to start if you are new to cloud, at a afforable price.
 
-You can find detailed instruction to run it on cloud [here](https://)
+You can find detailed instruction to run it on cloud [here](https://github.com/dipinthomas/digitalocean-droplet-terraform)
 
 # Kubernetes Deployment
 
-Containerzing an application is never complete unless it can run on kubernetes, instructions to run on [minikube](https://minikube.sigs.k8s.io/docs/start/) can be found here.
+Containerzing an application is never complete unless it can run on kubernetes, instructions to run on [minikube](https://minikube.sigs.k8s.io/docs/start/) can be found [here](https://github.com/dipinthomas/minikube-example)

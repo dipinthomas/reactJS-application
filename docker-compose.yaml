@@ -1,0 +1,23 @@
+version: "3.3"  # optional since v1.27.0
+services:
+  backend:
+    image: dipinthomas2003/wsgi-python:latest
+    ports:
+      - "5000"
+
+  proxy:
+    image: dipinthomas2003/nginx-proxy-uwsgi:latest
+    ports:
+        - "5000:5000"
+    environment:
+    - BB_HOST=backend
+    - BB_PORT=5000
+    command: /bin/bash -c "envsubst < /tmp/uwsgi_backend.conf > /etc/nginx/conf.d/new_config.conf && cat /etc/nginx/conf.d/new_config.conf && nginx -g 'daemon off;'"
+
+  frontend:
+    build:
+      context: .
+    ports:
+        - "80:3000"
+volumes:
+  logvolume01: {}

@@ -1,0 +1,4 @@
+psutil==5.8.0
+flask==2.0.2
+flask_cors==3.0.10
+uwsgi==2.0.20
